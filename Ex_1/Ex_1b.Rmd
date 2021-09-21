@@ -1,0 +1,52 @@
+---
+title: "Exercise 1b"
+author: "Kalin Nonchev"
+date: "9/21/2021"
+output: html_document
+---
+
+Now, let's proceed with the exercise!
+
+Let's generate 100 random values from log-normal distribution wuth mu=1
+and sigma=0.25:
+
+```{r}
+samples <- rlnorm(100, meanlog=1, sdlog=0.25)
+```
+
+Well done! Now we can create a histogram from this data:
+
+```{r, echo=F}
+# plot
+hist(samples)
+```
+
+and from the log-transformed data:
+
+```{r, echo=F}
+# plot
+hist(log(samples))
+```
+
+Let's find out the mean and the variance.
+
+```{r}
+mean(samples) # mean
+```
+
+```{r}
+var(samples) # variance
+```
+
+... and from the log-transformed samples:
+
+```{r}
+mean(log(samples)) # mean
+```
+
+```{r}
+var(log(samples)) # variance
+```
+
+
+#### So finally, the mean and the variance from the samples is 2.76213 and 0.5091734. When we log-transform the samples, we get a mean and variance of 0.983962 and 0.0646809
