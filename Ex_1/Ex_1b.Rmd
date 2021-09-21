@@ -31,22 +31,27 @@ hist(log(samples))
 Let's find out the mean and the variance.
 
 ```{r}
-mean(samples) # mean
+samples.mean <- mean(samples) # mean
+samples.mean
 ```
 
 ```{r}
-var(samples) # variance
+samples.var <- var(samples) # variance
+samples.var
 ```
 
 ... and from the log-transformed samples:
 
 ```{r}
-mean(log(samples)) # mean
+log.samples.mean <- mean(log(samples)) # mean
+log.samples.mean
 ```
 
 ```{r}
-var(log(samples)) # variance
+log.samples.var <- var(log(samples)) # variance
+log.samples.var
 ```
 
-
-#### So finally, the mean and the variance from the samples is 2.76213 and 0.5091734. When we log-transform the samples, we get a mean and variance of 0.983962 and 0.0646809
+```{r}
+print(paste0("So finally, the mean and the variance from the samples is ", samples.mean, " and ", samples.var, ". When we log-transform the samples, we get a mean and variance of ", log.samples.mean, " and ", log.samples.var))
+```
