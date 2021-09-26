@@ -53,5 +53,5 @@ log.samples.var
 ```
 
 ```{r}
-print(paste0("So finally, the mean and the variance from the samples is ", samples.mean, " and ", samples.var, ". When we log-transform the samples, we get a mean and variance of ", log.samples.mean, " and ", log.samples.var))
+print(paste0("So finally, the mean and the variance from the samples is ", round(samples.mean, 2), " and ", round(samples.var, 2), ". When we log-transform the samples, we get a mean and variance of ", round(log.samples.mean, 2), " and ", round(log.samples.var, 2)))
 ```
